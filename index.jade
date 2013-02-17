@@ -1,0 +1,31 @@
+!!!
+html
+
+	head
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="black-translucent")
+
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+		link(rel="stylesheet", href="ThirdParty/reveal.js/css/reveal.min.css")
+		link(rel="stylesheet", href="ThirdParty/reveal.js/css/theme/serif.css", id="theme")
+		script
+			document.write( '<link rel="stylesheet" href="ThirdParty/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		//if lt IE 9
+			script(src="ThirdParty/reveal.js/lib/js/html5shiv.js")
+
+	body
+		.reveal
+			.slides
+				section
+					include slides/001-intro.jade
+				section
+					include slides/099-references.jade
+				section
+					include slides/100-fin.jade
+
+		script(src="ThirdParty/reveal.js/lib/js/head.min.js")
+		script(src="ThirdParty/reveal.js/js/reveal.min.js")
+
+		script
+			Reveal.initialize();
